@@ -45,9 +45,10 @@ CONCURRENT_REQUESTS = 1
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
+SPIDER_MIDDLEWARES = {
+    'scrapy_autounit.AutounitMiddleware': 950
 #    'scrapyretail.middlewares.ScrapyretailSpiderMiddleware': 543,
-#}
+}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
@@ -87,3 +88,5 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+AUTOUNIT_ENABLED = True
